@@ -18,10 +18,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: ["http://localhost:5173"], 
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"], 
+  origin: [
+    "http://localhost:5173",
+    "https://job-poratl-frontend.vercel.app"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
 };
+
 
 
 app.use(cors(corsOptions));
